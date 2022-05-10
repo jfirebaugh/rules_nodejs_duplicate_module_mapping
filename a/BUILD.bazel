@@ -1,0 +1,13 @@
+load("@npm//@bazel/typescript:index.bzl", "ts_project")
+
+ts_project(
+    name = "a",
+    srcs = glob(["*.ts"]),
+    tsconfig = {
+
+    },
+    visibility = ["//visibility:public"],
+    deps = [
+        "@npm_a//@types/node",
+    ],
+)
